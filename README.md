@@ -6,7 +6,7 @@ Foxwave 是一个无需注册的浏览器音乐小玩具。音乐由 Web Audio �
 
 ## 在线体验
 
-https://foxwave.pages.dev
+Cloudflare Pages 部署待完成账户登录，计划地址：`https://foxwave.pages.dev`（以实际部署结果为准）。
 
 ## 三种心情，三个电台
 
