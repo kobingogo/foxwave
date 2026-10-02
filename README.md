@@ -6,7 +6,7 @@ Foxwave 是一个无需注册的浏览器音乐小玩具。音乐由 Web Audio �
 
 ## 在线体验
 
-Cloudflare Pages 部署待完成账户登录，计划地址：`https://foxwave.pages.dev`（以实际部署结果为准）。
+[打开狐狸电波](https://foxwave.pages.dev)
 
 ## 三种心情，三个电台
 
@@ -57,14 +57,17 @@ python3 -m http.server 8000
 
 ## 部署到 Cloudflare Pages
 
-首次发布采用 Wrangler Direct Upload，仅上传运行所需的两个文件：
+项目已连接 GitHub，推送到 `main` 分支后会自动构建并发布。
 
-```sh
-mkdir -p dist
-cp index.html fox-web.glb dist/
-npx wrangler pages deploy dist --project-name foxwave --branch main
-```
+Cloudflare Pages 设置：
 
-首次使用 Wrangler 需要登录 Cloudflare。此方式不会在 GitHub 推送后自动部署，更新时重新执行上述命令。Cloudflare 文档：https://developers.cloudflare.com/pages/get-started/direct-upload/
+- 仓库：`kobingogo/foxwave`
+- 生产分支：`main`
+- 构建命令：`mkdir -p dist && cp index.html fox-web.glb dist/`
+- 输出目录：`dist`
+
+发布目录只包含 `index.html` 和 `fox-web.glb`，无需安装项目依赖。
+
+部署说明：[Cloudflare Pages Git 集成](https://developers.cloudflare.com/pages/configuration/git-integration/)。
 
 `FOX-FM-技术复盘.md` 和 `index.v1.html` 仅保留在本地，不进入 GitHub 或网站部署。
